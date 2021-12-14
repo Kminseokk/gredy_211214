@@ -1,0 +1,13 @@
+n = 1260;
+count = 0;
+
+#큰 단위 화폐부터 입력
+array = [500, 100, 50, 10]
+
+for coin in array:
+  count += n // coin #큰 단위부터 나눈 몫을 저장. 갯수
+  print(f"{coin}원 짜리 {count}개")
+  count = 0;
+  n %= coin #남은 잔액
+
+print(count) #최적의 동전 개수
